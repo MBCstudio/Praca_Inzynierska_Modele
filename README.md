@@ -255,18 +255,8 @@ Szczegółowy opis architektury, metodologii treningu oraz wyników eksperyment�
 
 ---
 
-## 📄 Licencja
+## Licencja
 
 Projekt udostępniony na licencji **MIT License**. Zobacz [LICENSE](LICENSE).
 
 ---
-
-## 🙏 Podziękowania
-
-- Dr inż. Aleksandrze Knapińskiej za wsparcie merytoryczne
-- Społeczności TensorFlow i scikit-learn
-- Yahoo Finance za dostęp do danych
-
----
-
-**⭐ Jeśli projekt był pomocny, zostaw gwiazdkę!**
