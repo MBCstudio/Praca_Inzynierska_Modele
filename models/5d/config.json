@@ -1,0 +1,149 @@
+{
+    "ticker": "AAPL",
+    "sequence_length": 60,
+    "prediction_days": 5,
+    "feature_names": [
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Dividends",
+        "Stock Splits",
+        "Returns",
+        "Log_Returns",
+        "SMA_5",
+        "EMA_5",
+        "SMA_10",
+        "EMA_10",
+        "SMA_20",
+        "EMA_20",
+        "SMA_50",
+        "EMA_50",
+        "SMA_100",
+        "EMA_100",
+        "SMA_200",
+        "EMA_200",
+        "MACD",
+        "MACD_Signal",
+        "MACD_Hist",
+        "RSI_14",
+        "RSI_21",
+        "BB_Middle_20",
+        "BB_Upper_20",
+        "BB_Lower_20",
+        "BB_Width_20",
+        "BB_Position_20",
+        "Stochastic_K",
+        "Stochastic_D",
+        "ATR_14",
+        "OBV",
+        "Volume_SMA_20",
+        "Volume_Ratio",
+        "Momentum_1",
+        "ROC_1",
+        "Momentum_5",
+        "ROC_5",
+        "Momentum_10",
+        "ROC_10",
+        "Momentum_20",
+        "ROC_20",
+        "Volatility_20",
+        "Volatility_50",
+        "High_20",
+        "Low_20",
+        "Channel_Position",
+        "Close_Lag_1",
+        "Volume_Lag_1",
+        "Close_Lag_2",
+        "Volume_Lag_2",
+        "Close_Lag_3",
+        "Volume_Lag_3",
+        "Close_Lag_5",
+        "Volume_Lag_5",
+        "Close_Lag_10",
+        "Volume_Lag_10",
+        "Day_of_Week",
+        "Month",
+        "Quarter",
+        "Day_of_Month"
+    ],
+    "target_column": "Close",
+    "target_idx": 3,
+    "architecture": {
+        "type": "Hybrid LSTM-GRU (Bidirectional)",
+        "lstm_units": [
+            80,
+            48
+        ],
+        "gru_units": [
+            80
+        ],
+        "dense_units": [
+            128,
+            64
+        ],
+        "dropout": [
+            0.25,
+            0.25,
+            0.17
+        ],
+        "learning_rate": 0.0012,
+        "loss": "huber",
+        "batch_size": 64
+    },
+    "ensemble_info": {
+        "total_models_trained": 7,
+        "models_selected": 3,
+        "selection_criteria": "Lowest validation MAE",
+        "model_seeds": [
+            100,
+            140,
+            130
+        ],
+        "model_val_maes": [
+            0.3060187173628096,
+            0.33478453476897496,
+            0.3430587471444827
+        ]
+    },
+    "performance_metrics": {
+        "overall_mae": 4.649097938263252,
+        "overall_rmse": 5.564333893968695,
+        "overall_mape": 2.64276399612565,
+        "overall_r2": 0.22975498607417066,
+        "directional_accuracy": 32.0
+    },
+    "per_day_metrics": {
+        "day_Day_1": {
+            "mae": 4.689779096760694,
+            "rmse": 5.485398622868645,
+            "mape": 2.639232077335554,
+            "r2": 0.30999606026079995
+        },
+        "day_Day_2": {
+            "mae": 4.599817671810606,
+            "rmse": 5.451065765016606,
+            "mape": 2.591442983278078,
+            "r2": 0.2872571325731139
+        },
+        "day_Day_3": {
+            "mae": 4.084924395209555,
+            "rmse": 4.76522136011059,
+            "mape": 2.320249631387265,
+            "r2": 0.43321093280771017
+        },
+        "day_Day_4": {
+            "mae": 6.5125897141064435,
+            "rmse": 7.392114328503854,
+            "mape": 3.709261317929485,
+            "r2": -0.42788197327082167
+        },
+        "day_Day_5": {
+            "mae": 3.3583788134289625,
+            "rmse": 4.201744106322116,
+            "mape": 1.9536339706978674,
+            "r2": 0.5002329049429439
+        }
+    }
+}

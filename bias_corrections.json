@@ -1,0 +1,22 @@
+{
+    "1d": {
+        "bias_correction_factor": 1.2850757710714897,
+        "scaler_center": 58.06973373393098,
+        "scaler_scale": 103.15546295995183
+    },
+    "5d": {
+        "bias_correction_factor": 1.322253140081323,
+        "scaler_center": 58.12670897901646,
+        "scaler_scale": 103.17606340842113
+    },
+    "10d": {
+        "bias_correction_factor": 1.3928894728084726,
+        "scaler_center": 58.06974701629331,
+        "scaler_scale": 103.15547366803507
+    },
+    "21d": {
+        "bias_correction_factor": 1.4692263697453662,
+        "scaler_center": 58.06973747714069,
+        "scaler_scale": 103.15544391235719
+    }
+}

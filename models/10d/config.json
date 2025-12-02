@@ -1,0 +1,166 @@
+{
+    "ticker": "AAPL",
+    "sequence_length": 60,
+    "prediction_days": 10,
+    "feature_names": [
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "Dividends",
+        "Stock Splits",
+        "Returns",
+        "Log_Returns",
+        "SMA_5",
+        "EMA_5",
+        "SMA_10",
+        "EMA_10",
+        "SMA_20",
+        "EMA_20",
+        "SMA_50",
+        "EMA_50",
+        "SMA_100",
+        "EMA_100",
+        "SMA_200",
+        "EMA_200",
+        "MACD",
+        "MACD_Signal",
+        "MACD_Hist",
+        "RSI_14",
+        "RSI_21",
+        "BB_Middle_20",
+        "BB_Upper_20",
+        "BB_Lower_20",
+        "BB_Width_20",
+        "BB_Position_20",
+        "Stochastic_K",
+        "Stochastic_D",
+        "ATR_14",
+        "OBV",
+        "Volume_SMA_20",
+        "Volume_Ratio",
+        "Momentum_1",
+        "ROC_1",
+        "Momentum_5",
+        "ROC_5",
+        "Momentum_10",
+        "ROC_10",
+        "Momentum_20",
+        "ROC_20",
+        "Volatility_20",
+        "Volatility_50",
+        "High_20",
+        "Low_20",
+        "Channel_Position",
+        "Close_Lag_1",
+        "Volume_Lag_1",
+        "Close_Lag_2",
+        "Volume_Lag_2",
+        "Close_Lag_3",
+        "Volume_Lag_3",
+        "Close_Lag_5",
+        "Volume_Lag_5",
+        "Close_Lag_10",
+        "Volume_Lag_10",
+        "Day_of_Week",
+        "Month",
+        "Quarter",
+        "Day_of_Month"
+    ],
+    "target_column": "Close",
+    "target_idx": 3,
+    "architecture": {
+        "type": "Hybrid LSTM-GRU",
+        "lstm_units": [
+            128,
+            96
+        ],
+        "dropout": 0.3,
+        "learning_rate": 0.0008
+    },
+    "ensemble_info": {
+        "total_models_trained": 7,
+        "models_selected": 3,
+        "selection_criteria": "Lowest validation MAE",
+        "model_seeds": [
+            160,
+            130,
+            100
+        ],
+        "model_val_maes": [
+            0.053352356550470846,
+            0.0761675088907218,
+            0.08763608030471105
+        ]
+    },
+    "performance_metrics": {
+        "overall_mae": 4.053062521892832,
+        "overall_rmse": 5.1922664061649035,
+        "overall_mape": 2.287744126089931,
+        "overall_r2": 0.2774480232494071,
+        "directional_accuracy": 82.0
+    },
+    "per_day_metrics": {
+        "day_Day_1": {
+            "mae": 4.440438406908352,
+            "rmse": 5.759842754416595,
+            "mape": 2.4667116647779133,
+            "r2": 0.25835046720446475
+        },
+        "day_Day_2": {
+            "mae": 4.2704955761599015,
+            "rmse": 5.532178870571713,
+            "mape": 2.379772871021823,
+            "r2": 0.2981767472574235
+        },
+        "day_Day_3": {
+            "mae": 4.118384840868516,
+            "rmse": 5.366390045606962,
+            "mape": 2.3033813590563867,
+            "r2": 0.3092283363556132
+        },
+        "day_Day_4": {
+            "mae": 4.688101543143734,
+            "rmse": 5.894174027786316,
+            "mape": 2.6364732106802715,
+            "r2": 0.13283617778750345
+        },
+        "day_Day_5": {
+            "mae": 4.345016811439029,
+            "rmse": 5.578437526680613,
+            "mape": 2.4494283021949737,
+            "r2": 0.1868323311347515
+        },
+        "day_Day_6": {
+            "mae": 4.122298813297687,
+            "rmse": 5.169335862757605,
+            "mape": 2.3356617266489383,
+            "r2": 0.24355386928109135
+        },
+        "day_Day_7": {
+            "mae": 3.8430052300725537,
+            "rmse": 4.8397282757472935,
+            "mape": 2.1852600508087523,
+            "r2": 0.27838470489639344
+        },
+        "day_Day_8": {
+            "mae": 3.9072881586243535,
+            "rmse": 4.862829874227838,
+            "mape": 2.228964933702895,
+            "r2": 0.217885381748414
+        },
+        "day_Day_9": {
+            "mae": 3.149568936258431,
+            "rmse": 3.973292185833442,
+            "mape": 1.8052817201703442,
+            "r2": 0.4423862592162505
+        },
+        "day_Day_10": {
+            "mae": 3.646026902155754,
+            "rmse": 4.645207170733536,
+            "mape": 2.086505421837013,
+            "r2": 0.17231735477789722
+        }
+    }
+}
