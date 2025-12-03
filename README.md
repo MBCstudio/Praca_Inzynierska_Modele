@@ -244,7 +244,7 @@ Szczegółowy opis architektury, metodologii treningu oraz wyników eksperyment�
 
 ## 🔗 Powiązane repozytoria
 
-- 🌐 **[Web Application (Frontend + Backend)](https://github.com/twoj-username/stock-prediction-webapp)** – Aplikacja webowa React + Flask wykorzystująca te modele
+- 🌐 **[Web Application (Frontend + Backend)]([https://github.com/twoj-username/stock-prediction-webapp](https://github.com/MBCstudio/Praca_Inzynierska_UI))** – Aplikacja webowa React + Flask wykorzystująca te modele
 
 ---
 
